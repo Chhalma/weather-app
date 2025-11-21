@@ -1,70 +1,118 @@
-# Getting Started with Create React App
+# Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive React-based weather application that allows users to search for cities and view the current weather, including temperature, weather condition, wind speed, humidity, and pressure. The app uses a geolocation API for city search and a weather API for real-time weather data.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+* **City Search:** Users can search for cities worldwide using an autocomplete search bar powered by `react-select-async-paginate`.
+* **Current Weather Display:** Shows temperature, weather description, feels-like temperature, wind speed, humidity, and pressure.
+* **Responsive Design:** Works on desktop and mobile devices.
+* **Weather Icons:** Displays weather icons based on current conditions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Demo
 
-### `npm test`
+![Weather App Screenshot](./screenshot.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/YourUsername/weather-app.git
+   ```
+2. Navigate into the project directory:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   cd weather-app
+   ```
+3. Install dependencies:
 
-### `npm run eject`
+   ```bash
+   npm install
+   ```
+4. Create a `.env` file in the root directory and add your API keys:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```env
+   REACT_APP_WEATHER_API_KEY=your_weather_api_key
+   REACT_APP_GEO_API_URL=your_geo_api_url
+   ```
+5. Start the development server:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Technologies Used
 
-## Learn More
+* **Frontend:** React, AsyncPaginate (react-select-async-paginate)
+* **APIs:** Geo API for city search, OpenWeatherMap API (or other) for weather data
+* **Styling:** CSS, Flexbox
+* **State Management:** React Hooks (`useState`, `useEffect`)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Folder Structure
 
-### Code Splitting
+```
+weather-app/
+├─ public/
+│  └─ icons/            # Weather icons
+├─ src/
+│  ├─ components/
+│  │  ├─ Search.js
+│  │  └─ CurrentWeather.js
+│  ├─ api.js            # API endpoints and options
+│  └─ App.js
+├─ .env                 # API keys
+├─ package.json
+└─ README.md
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Open the app in your browser.
+2. Type the name of a city in the search bar.
+3. Select the city from the dropdown.
+4. View the current weather data for the selected city.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Customization
 
-### Advanced Configuration
+* Adjust the styling in `current-weather.css` to change the layout, colors, and fonts.
+* Change the number of cities returned or prioritized countries in `Search.js`.
+* Replace or expand the weather icons in the `/public/icons` folder.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## Future Improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* Add a **7-day forecast** for selected cities.
+* Include **unit toggle** between Celsius and Fahrenheit.
+* Integrate **dark/light mode** for better UX.
+* Add **geolocation support** to show weather for the user’s current location.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+## Author
+
+**Chhalma Chhaya**
+Email: [chhaya.mist@gmail.com](mailto:chhaya.mist@gmail.com)
+GitHub: [ChhalmaGitHub](https://github.com/Chhalma)
+Portfolio: [ChhalmaPortfolio](https://chhalma.github.io/portfolio/)

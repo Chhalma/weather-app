@@ -1,0 +1,12 @@
+.searchBar{
+    align-items: center;     /* Vertically center label and search bar */
+    gap: 0px;    
+}
+
+.weather{
+    font-size: 32px;
+    font-weight: 600;
+    color: antiquewhite;
+    padding: 10px;
+    margin: 10px 20px;
+}

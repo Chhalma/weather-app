@@ -11,11 +11,11 @@ const WEEK_DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Satu
 
 const Forecast = ({ data }) => {
   const today = new Date().getDay();
-  const forecastDays = WEEK_DAYS.slice(today).concat(WEEK_DAYS.slice(0, today));
+  const forecastDays = WEEK_DAYS.slice(today,WEEK_DAYS.length).concat(WEEK_DAYS.slice(0, today));
 
   return (
     <>
-      <label className="title">Daily</label>
+      <label className="title">7 Day Forecast</label>
       <Accordion allowZeroExpanded>
         {data.list.slice(0, 7).map((item, idx) => (
           <AccordionItem key={idx}>
@@ -23,7 +23,7 @@ const Forecast = ({ data }) => {
               <AccordionItemButton>
                 <div className="daily-item">
                   <img
-                    src={`icons/${item.weather[0].icon}.png`}
+                    src={`${process.env.PUBLIC_URL}/icons/${item.weather[0].icon}.png`}
                     className="icon-small"
                     alt="weather"
                   />
