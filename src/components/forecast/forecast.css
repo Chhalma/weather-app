@@ -40,7 +40,10 @@
 }
 
 .daily-details-grid {
-  background-color: #f5f5f5;
+  width: 95%;
+  margin: 0 auto;
+  background-color: #e5e1f7;
+  border-radius: 0 50px 0px 50px  ;
   grid-row-gap: 0;
   grid-column-gap: 15px;
   -webkit-column-gap: 15px;
@@ -50,7 +53,7 @@
   grid-template-columns: auto auto;
   padding: 5px 15px;
   row-gap: 0;
-}
+  }
 
 .daily-details-grid-item {
   align-items: center;
